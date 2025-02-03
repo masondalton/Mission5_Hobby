@@ -3,17 +3,19 @@
 }
 <h1 style="text-align: center">@ViewData["Title"]</h1>
 
-<!-- Page Wrapper for the calculator -->
+<!-- Calulator for the pricing of my time -->
 <div class="page-wrapper">
     <div class="calculator-container">
         <h2>Story Consultant Cost Calculator</h2>
-
+        
+        <!-- Gets input and displays a static/unchangeable rate, validates for positive entries -->
         <label for="hours">Enter Hours Needed:</label>
         <input type="number" id="hours" placeholder="Enter hours" min="1">
 
         <label for="rate">Hourly Rate ($):</label>
         <input type="text" id="rate" value="30" readonly>
 
+        <!-- Button to call fucntion in jquery for calulating total cost to then display as read only text -->
         <button id="calculate">Calculate Total</button>
 
         <div class="output">
@@ -24,6 +26,7 @@
         <p id="error-message" class="error"></p>
     </div>
 </div>
+
 <!-- Ensure jQuery is included -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/js/calculator.js"></script>
