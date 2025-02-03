@@ -12,11 +12,101 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* Adds spacing between sections */
+  width: 80%;
+  margin: auto;
 }
 
-body {
-  margin-bottom: 60px;
+.custom-text {
+  display: flex;
+  align-items: center;
+  max-width: 900px; /* Adjust width as needed */
+  gap: 20px; /* Space between image and text */
+}
+
+.custom-text:nth-child(odd) {
+  flex-direction: row;
+}
+
+.custom-text:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.custom-image {
+  width: 400px; /* Adjust for better layout */
+  height: auto;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.custom-footer {
+  position: relative; /* Keeps it within normal flow */
+  width: 100%;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd; /* Subtle top border */
+}
+
+.custom-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.custom-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes the full viewport height */
+}
+
+.custom-main-content {
+  flex-grow: 1; /* Pushes the footer to the bottom */
+  padding-bottom: 20px; /* Ensures spacing so the footer doesn’t overlap */
+}
+
+.calculator-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+input, button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.output {
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
 }
