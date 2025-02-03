@@ -74,14 +74,40 @@ p {
   padding-bottom: 20px; /* Ensures spacing so the footer doesn’t overlap */
 }
 
+/* Ensure the body doesn't add unwanted spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove margin on the h1 tag */
+h1 {
+  margin: 0;
+  padding-bottom: 10px; /* Optional: Add some space below the title */
+}
+
+/* Page wrapper centered vertically */
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: flex-start; /* Align to the top */
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding-top: 30px; /* Adjust this value for spacing at the top */
+}
+
+/* Calculator container styling */
 .calculator-container {
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: inline-block;
+  width: 100%;
+  max-width: 500px; /* Optional: Limit max width */
 }
 
+/* Styling for input and button */
 input, button {
   display: block;
   margin: 10px auto;
@@ -89,8 +115,9 @@ input, button {
   font-size: 16px;
 }
 
+/* Button styling */
 button {
-  background: #007bff;
+  background: #DAB87C;
   color: white;
   border: none;
   cursor: pointer;
@@ -98,14 +125,17 @@ button {
   border-radius: 5px;
 }
 
+/* Button hover effect */
 button:hover {
-  background: #0056b3;
+  background: #926413;
 }
 
+/* Output section styling */
 .output {
   margin-top: 10px;
 }
 
+/* Error message styling */
 .error {
   color: red;
   font-size: 14px;

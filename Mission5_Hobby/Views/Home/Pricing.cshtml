@@ -1,25 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Pricing";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 style="text-align: center">@ViewData["Title"]</h1>
 
-<div class="calculator-container">
-    <h2>Story Consultancy Calculator</h2>
+<!-- Page Wrapper for the calculator -->
+<div class="page-wrapper">
+    <div class="calculator-container">
+        <h2>Story Consultant Cost Calculator</h2>
 
-    <label for="hours">Enter Hours Needed:</label>
-    <input type="number" id="hours" placeholder="Enter hours" min="1">
+        <label for="hours">Enter Hours Needed:</label>
+        <input type="number" id="hours" placeholder="Enter hours" min="1">
 
-    <label for="rate">Hourly Rate ($):</label>
-    <input type="text" id="rate" value="30" readonly>
+        <label for="rate">Hourly Rate ($):</label>
+        <input type="text" id="rate" value="30" readonly>
 
-    <button id="calculate">Calculate Total</button>
+        <button id="calculate">Calculate Total</button>
 
-    <div class="output">
-        <label for="total">Total Cost ($):</label>
-        <input type="text" id="total" readonly>
+        <div class="output">
+            <label for="total">Total Cost ($):</label>
+            <input type="text" id="total" readonly>
+        </div>
+
+        <p id="error-message" class="error"></p>
     </div>
-
-    <p id="error-message" class="error"></p>
 </div>
+<!-- Ensure jQuery is included -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/js/calculator.js"></script>
