@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $("#calculate").click(function() {
-        let hours = $("#hours").val();
-        let rate = $("#rate").val();
+        let hours = parseFloat($("#hours").val());  // Convert hours to a number
+        let rate = parseFloat($("#rate").val());   // Convert rate to a number
+        console.log("Hours:", hours, "Rate:", rate);
 
         // Input validation
-        if (!hours || hours <= 0) {
-            $("#error-message").text("Please enter a valid positive number.");
+        if (isNaN(hours) || hours <= 0) {
+            $("#error-message").text("Please enter a valid positive number for hours.");
             $("#total").val("");  // Clear total if invalid input
             return;
         }
